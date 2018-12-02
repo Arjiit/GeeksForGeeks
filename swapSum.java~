@@ -1,0 +1,56 @@
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+public class swapSum {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int t = sc.nextInt();
+		while(t>0) {
+			int n1 = sc.nextInt();
+			int n2 = sc.nextInt();
+			int[] arr1 = new int[n1];
+			int[] arr2 = new int[n2];
+			for (int i=0; i<n1; i++) {
+				arr1[i] = sc.nextInt();
+			}
+			for (int j=0; j<n2; j++) {
+				arr2[j] = sc.nextInt();
+			}
+			System.out.println(compare(arr1,arr2));
+			t--;
+			
+		}
+	}
+	
+	public static int compare (int arr1[], int arr2[]) {
+		int sum1=0;
+		int sum2=0;
+		for (int k=0; k<arr1.length; k++) {
+			sum1 = sum1 + arr1[k];
+		}
+		
+		for (int l=0; l<arr2.length; l++) {
+			sum2 = sum2 + arr2[l];
+		}
+		
+		int diff = Math.abs(sum1-sum2);
+		for (int m=0; m<arr1.length; m++) {
+			for (int n=0; n<arr2.length; n++) {
+				if (arr1[m] + arr2[n] == diff) {
+					
+					return 1;
+				}
+				else {
+					continue;
+				}
+			}
+		}
+		return 0;
+	}
+}
+		
+		
+	

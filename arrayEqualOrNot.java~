@@ -1,0 +1,22 @@
+import java.io.*;
+import java.lang.*;
+import java.util.*;
+
+public class arrayEqualOrNot {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int t = sc.nextInt();
+		while(t>0) {
+			int n1 = sc.nextInt();
+			int[] arr1 = new int[n1];
+			for (int i=0; i<n1; i++) {
+				arr1[i] = sc.nextInt();
+			}
+			compare(arr1,n1);
+			t--;
+			
+		}
+	}
+	
