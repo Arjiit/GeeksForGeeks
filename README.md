@@ -1,2 +1,2 @@
 # GeeksForGeeks
-Solutions to algorithm problems fro Geeks For Geeks
+Solutions to algorithm problems for Geeks For Geeks
