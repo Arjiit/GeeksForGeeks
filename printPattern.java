@@ -2,24 +2,30 @@ import java.io.*;
 import java.util.*;
 
 public class printPattern {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		printPattern pp = new printPattern();
-		pp.print(n);
-	}
-	
-	void print(int n) {
-		if (n <= 1) {
-			System.out.println("*");
-		}
-		else {
-			for(int i=0; i<n; i++) {
-				System.out.print("* ");
-			}
-			System.out.println();
-			print(n-1);
-		}
-	}
-	
+    public static void main(String[] args) {
+        int n = 16;
+        printPattern p = new printPattern();
+        p.getPattern(n,n, true);
+    }
+
+    public void getPattern(int n, int m, boolean flag) {
+        
+        System.out.print(m + " ");
+
+        if (n == m && flag == false) {
+            return;
+        }
+        if (flag) {
+
+            if (m - 5 > 0) {
+                getPattern(n, m - 5, true);
+            } else {
+                getPattern(n, m-5, false);
+            }
+            
+            
+        } else {
+            getPattern(n, m+5, false);
+        }
+    }
 }
